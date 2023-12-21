@@ -1,6 +1,8 @@
 {
   "name": "my-resume",
   "version": "0.1.0",
+  "predepoly": "npm run build",
+  "deploy" : "gh-pages -d build",
   "private": true,
   "homepage": "https://theonewith-3j.github.io/resume",
   "dependencies": {
