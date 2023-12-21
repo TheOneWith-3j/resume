@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    
+    .clip.polygon {
+    clip-path: polygon(0 10%, 98% 0, 98% 90%, 0% 100%);
+    /* clip-path: circle(59.7% at 50% 50%);  */
+    }
+
+    .navbar-nav  .active{
+      color: #faf089 !important;
+      font-weight: bolder;
+      background-color: #3031176b; 
+      border-radius: 10px;
+      
+    }
+
+    .a{
+      color:inherit !important;
+      text-decoration: none !important;
+    }
+
+    .serviceicon > .MuiSvgIcon-root {
+      width: 200% !important;
+      height: 200% !important;
+      margin: -10px !important;
+      text-align: center !important;
+      align-items: center !important;
+      justify-content: center !important;
+      /* margin-bottom: 8px !important;
+      margin-top: 8px !important; */
+
+    } 
+
+    /* .flex > .MuiTimelineDot-root{
+      border-color: #faf089 !important;
+    } 
+
+    .MuiButtonBase-root .MuiTab-root{
+      color: #faf089 !important;
+      background-color: blue !important ;
+
+    } */
+  }
+  
