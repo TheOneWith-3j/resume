@@ -43,8 +43,8 @@ const Header = (props) => {
             {/* Resume Link */}
             <Nav.Link
               as={NavLink}
-              to="/resume"
-              className={pathName ==  "/resume" ? "active" : "text-white bg"}
+              to="/resume/my-resume"
+              className={pathName ===  "/resume/my-resume" || pathName==='/resume' ? "active" : "text-white bg"}
             >
               <p className="text-xl my-1 hover:text-yellow-200">Resume</p>
             </Nav.Link>

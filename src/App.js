@@ -56,7 +56,8 @@ function App() {
 
               <div className="bg-black bg-opacity-25 rounded-3xl mt-4 mb-4 p-4 text-white min-h-screen">
                 <Routes>
-                  <Route index path="/resume" element={<Resume />} />
+                  <Route index  path="/resume" element={<Resume />} />
+                  <Route exact path="/resume/my-resume" element={<Resume/>}/>
                   <Route path="resume/portfolio" element={<Portfolio />} />
                   <Route path="resume/contact" element={<Contact />} />
                   <Route path="*" element={<PageNotFound />} />
