@@ -8,6 +8,8 @@ import Navbar from "../src/components/Navbar";
 import Timeline from "./components/Timeline";
 import Header from "./components/Header";
 
+import PageNotFound from "./utils/PageNotFound";
+
 import { Container, Grid } from "@material-ui/core";
 // import mypic from "../assets/mypic.jpg";
 import backgroundImage from "../src/assets/bgimg_edited.png";
@@ -55,9 +57,9 @@ function App() {
               <div className="bg-black bg-opacity-25 rounded-3xl mt-4 mb-4 p-4 text-white min-h-screen">
                 <Routes>
                   <Route index path="/resume" element={<Resume />} />
-                  <Route path="/timeline" element={<Timeline />} />
-                  <Route path="/portfolio" element={<Portfolio />} />
-                  <Route path="/contact" element={<Contact />} />
+                  <Route path="resume/portfolio" element={<Portfolio />} />
+                  <Route path="resume/contact" element={<Contact />} />
+                  <Route path="*" element={<PageNotFound />} />
                 </Routes>
                 
               </div>

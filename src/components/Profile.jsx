@@ -15,6 +15,8 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import DownloadIcon from "@mui/icons-material/DownloadRounded"
 import Header from "../components/Header";
 
+import resume from '../assets/Jash_Joshi-Resume.pdf'
+
 const Profile = () => {
   return (
     <div>
@@ -46,10 +48,12 @@ const Profile = () => {
               </div>
               <div
                     // onClick={handleClick}
-                    className="mt-4 bg-yellow-300 shadow-2xl m-4 p-3 rounded-full  cursor-pointer hover:bg-yellow-200"
+                    className=" bg-yellow-300 shadow-2xl m-4 p-3 rounded-full  cursor-pointer hover:bg-yellow-200"
                   >
-                    <p className="font-Poppins text-xl text-black m-1 text-center font-semibold">
+                    <p className="font-Poppins text-xl text-center  align-middle mt-2 mb-2">
+                      <a href={resume} download="Jash J. Joshi- Resume" className='font-black text-black  no-underline'>
                       Download Resume {<DownloadIcon/>}
+                      </a>
                     </p>
               </div>
     </div>
