@@ -48,11 +48,11 @@ const Resume = () => {
                   <TimelineItem>
                     <CustomTimelineSeparator />
                     <TimelineContent>
-                      <p className="text-xl  text-yellow-100">
-                        {experience.title}
-                      </p>
+                      <p className="text-xl -mb-1.5 text-yellow-100">{experience.title}</p>
+                      <p className="text-lg text-yellow-50">{experience.company}</p>
                       <p className="text-md">{experience.date}</p>
-                      <p className="text-sm">{experience.description}</p>
+                      {/* {const ln = (experience.description).length} */}
+                      <p className="text-sm bg-yellow-50 pt-2 pb-2 pr-2 rounded-3xl  bg-opacity-10"><ul className="list-disc"><li>{experience.description[0]}</li> <li>{experience.description[1]}</li></ul></p>
                     </TimelineContent>
                   </TimelineItem>
                 ))}
@@ -66,11 +66,12 @@ const Resume = () => {
                   <TimelineItem>
                     <CustomTimelineSeparator />
                     <TimelineContent>
-                      <p className="text-xl text-yellow-100">
+                      <p className="text-xl text-yellow-100 -mb-1.5">
                         {education.title}
                       </p>
+                      <p className="text-lg text-yellow-50 -mb-0.5">{education.institute}</p>
                       <p className="text-md">{education.date}</p>
-                      <p className="text-sm">{education.description}</p>
+                      <p className="text-sm bg-yellow-50 pt-2 pb-2 pr-2 rounded-3xl bg-opacity-10"><ul className="list-disc"><li className="font-semibold underline-offset-2">{education.score}</li></ul></p>
                     </TimelineContent>
                   </TimelineItem>
                 ))}
@@ -94,14 +95,14 @@ const Resume = () => {
 
         <Grid container>
           <Grid item xs={12}>
-            <Grid container spacing={5} className="justify-around">
+            <Grid container className="justify-around">
               {resumeData.services.map((service) => (
                 <Grid item xs={12} sm={6} md={3}>
                   <div className="h-full text-center font-Poppins p-2 shadow-2xl rounded-3xl backdrop-blur-sm ">
-                    <div className="text-yellow-300 serviceicon MuiSvgIcon-root">
+                    <div className="text-yellow-300 serviceicon MuiSvgIcon-root mt-3">
                       {service.icon}
                     </div>
-                    <p className="text-yellow-100 text-lg font-semibold leading-8">
+                    <p className="text-yellow-100 text-lg font-semibold mt-3 mb-3">
                       {service.title}
                     </p>
                     <p className="text-center">{service.description}</p>
@@ -131,14 +132,10 @@ const Resume = () => {
                 <p className="text-lg text-yellow-100 font-Poppins font-semibold text-center">
                   {skill.title}
                 </p>
-                {skill.description.map((element) => (
-                  <p>
-                    <TimelineDot
-                      variant="outlined"
-                      className="flex  m-2 float-left"
-                    />
-                    <p className="m-1">{element}</p>
-                  </p>
+                {skill.description.map((element) => (                
+                    <ul className="list-disc marker:text-yellow-400 marker:text-xl">
+                      <li className="">{element}</li>
+                    </ul>
                 ))}
               </div>
             </Grid>

@@ -54,7 +54,7 @@ const Portfolio = () => {
           </Grid>
 
       <Grid item xs={12}>
-        <Grid container spacing={3} className="mt-2 justify-around mb-4">
+        <Grid container spacing={3} className="mt-2 justify-between mb-4">
           {/* {resumeData.projects.map(proj =>(
                       
               <Grid item>
@@ -79,21 +79,21 @@ const Portfolio = () => {
         </Grid> */}
         <Grid item xs={12} sm={6} md={6}>
         {/* <CustomCards tag={portfolioData.project1.tag} title={portfolioData.project1.title} description={portfolioData.project1.description} images={portfolioData.project1.images}/> */}
-          <GalleryModal projectTitle={portfolioData.project1.title} projectVideos={portfolioData.project1.videos} projectImages={portfolioData.project1.images} projectDescription={portfolioData.project1.description} demoLink={portfolioData.project1.links[0]} />
+          <GalleryModal projectTitle={portfolioData.project1.title} caption={portfolioData.project1.caption} projectVideos={portfolioData.project1.videos} projectImages={portfolioData.project1.images} projectDescription={portfolioData.project1.description} demoLink={portfolioData.project1.links[0]} />
 
         </Grid>
-        <Grid item>
+        <Grid item >
         {/* <CustomCards tag={portfolioData.project2.tag} title={portfolioData.project2.title} description={portfolioData.project2.description} images={portfolioData.project2.images}/> */}
-        <GalleryModal projectTitle={portfolioData.project2.title} projectVideos={portfolioData.project2.videos} projectImages={portfolioData.project2.images} projectDescription={portfolioData.project2.description} demoLink={portfolioData.project2.links[0]} />
+        <GalleryModal projectTitle={portfolioData.project2.title}  caption={portfolioData.project2.caption} projectVideos={portfolioData.project2.videos} projectImages={portfolioData.project2.images} projectDescription={portfolioData.project2.description} demoLink={portfolioData.project2.links[0]} />
         </Grid>
-        <Grid item>
-        {/* <CustomCards tag={portfolioData.project3.tag} title={portfolioData.project3.title} description={portfolioData.project3.description} images={portfolioData.project3.images}/> */}
-        <GalleryModal projectTitle={portfolioData.project3.title} projectVideos={portfolioData.project3.videos} projectImages={portfolioData.project3.images} projectDescription={portfolioData.project3.description} demoLink={portfolioData.project3.links[0]} />
+        <Grid item >
+        {/* <CustomCards tag={portfolioData.project3.tag} title={p caption={portfolioData.project2.caption} ortfolioData.project3.title} description={portfolioData.project3.description} images={portfolioData.project3.images}/> */}
+        <GalleryModal projectTitle={portfolioData.project3.title}  caption={portfolioData.project3.caption} projectVideos={portfolioData.project3.videos} projectImages={portfolioData.project3.images} projectDescription={portfolioData.project3.description} demoLink={portfolioData.project3.links[0]} />
 
         </Grid>
-        <Grid item>
-          {/* <CustomCards tag={portfolioData.project4.tag} title={portfolioData.project4.title} description={portfolioData.project4.description} images={portfolioData.project4.images}/> */}
-          <GalleryModal projectTitle={portfolioData.project4.title} projectVideos={portfolioData.project4.videos} projectImages={portfolioData.project4.images} projectDescription={portfolioData.project4.description} demoLink={portfolioData.project4.links[0]} />
+        <Grid item >
+          {/* <CustomCards tag={portfolioData.project4.tag} title= caption={portfolioData.project2.caption} {portfolioData.project4.title} description={portfolioData.project4.description} images={portfolioData.project4.images}/> */}
+          <GalleryModal projectTitle={portfolioData.project4.title} caption={portfolioData.project4.caption} projectVideos={portfolioData.project4.videos} projectImages={portfolioData.project4.images} projectDescription={portfolioData.project4.description} demoLink={portfolioData.project4.links[0]} />
 
         </Grid>
       </Grid>

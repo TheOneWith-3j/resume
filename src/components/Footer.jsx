@@ -25,14 +25,14 @@ const Footer = () => {
             <h4 className="font-semibold my-t-4 ">Quick Links</h4>
               <ul>
                 <li className="text-slate-800 hover:scale-105 transition-all duration-500 ">
-                  <Link to={"/"} className="text-white no-underline">Resume</Link>
+                  <Link to={"/resume"} className="text-white no-underline">Resume</Link>
                 </li>
                 <li className="text-slate-800 hover:scale-105 transition-all duration-500 ">
-                  <Link to={"/portfolio"} className="text-white no-underline">Portfolio</Link>
+                  <Link to={"/resume/portfolio"} className="text-white no-underline">Portfolio</Link>
                 </li>
                 
                 <li className="text-white hover:scale-105 transition-all duration-500 ">
-                  <Link to={"/contact"} className="text-white no-underline">Contact</Link>
+                  <Link to={"/resume/contact"} className="text-white no-underline">Contact</Link>
                 </li>
               </ul>
             </div>
