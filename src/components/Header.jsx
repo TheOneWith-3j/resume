@@ -30,7 +30,7 @@ const Header = (props) => {
         sticky="top"
         className="w-full flex backdrop-blur-3xl top-0 start-0 border-b-4 bg-gradient-to-t from-transparent to-black to-40% dark:border-yellow-200 rounded-xl"
       >
-        <Nav.Link as={NavLink} to="/">
+        <Nav.Link as={NavLink} to="/resume">
           <Navbar.Brand className="">
             <span className="bg-yellow-300 rounded p-3 m-3">{<HomeRounded />}</span>
           </Navbar.Brand>
@@ -43,8 +43,8 @@ const Header = (props) => {
             {/* Resume Link */}
             <Nav.Link
               as={NavLink}
-              to="/"
-              className={pathName ==  "/" ? "active" : "text-white bg"}
+              to="/resume"
+              className={pathName ==  "/resume" ? "active" : "text-white bg"}
             >
               <p className="text-xl my-1 hover:text-yellow-200">Resume</p>
             </Nav.Link>
@@ -52,8 +52,8 @@ const Header = (props) => {
             {/* Portfolio Link */}
             <Nav.Link
               as={NavLink}
-              to="/portfolio"
-              className={pathName === "/portfolio" ? "text-yellow-300" : "text-white"}
+              to="/resume/portfolio"
+              className={pathName === "/resume/portfolio" ? "text-yellow-300" : "text-white"}
             >
               <p className="text-xl my-1 hover:text-yellow-200">Portfolio</p>
             </Nav.Link>
@@ -70,8 +70,8 @@ const Header = (props) => {
             {/* Contact Link */}
             <Nav.Link
               as={NavLink}
-              to="/contact"
-              className={pathName === "/contact" ? "text-yellow-300" : "text-white "}
+              to="/resume/contact"
+              className={pathName === "/resume/contact" ? "text-yellow-300" : "text-white "}
             >
               <p className="text-xl my-1 hover:text-yellow-200">Contact</p>
             </Nav.Link>
