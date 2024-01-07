@@ -71,6 +71,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { CloseRounded } from '@material-ui/icons';
 import resumeData from '../utils/resumeData';
+import { Grid } from '@mui/material';
 
 const GalleryModal = ({ projectTitle, projectImages, projectDescription, demoLink, projectVideos, caption}) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -84,8 +85,8 @@ const GalleryModal = ({ projectTitle, projectImages, projectDescription, demoLin
   };
 
   return (
-    <div>
-      <button className="bg-yellow-100 h-full hover:bg-yellow-300 py-2 px-4 rounded-2xl max-w-sm" onClick={() => setModalIsOpen(true)}>
+    <div className='h-full'>
+      <button className="bg-yellow-100 h-full hover:bg-yellow-300 py-2 px-3 rounded-2xl max-w-sm" onClick={() => setModalIsOpen(true)}>
       
             <div className='text-center p-2 h-full text-black'>
                 <p className='font-bold'>{projectTitle}</p>
@@ -150,15 +151,30 @@ const GalleryModal = ({ projectTitle, projectImages, projectDescription, demoLin
 
         <p className="text-gray-600 mb-5 p-2 mt-3 max-w-xl border-b-8 border-yellow-200">{projectDescription}</p>
 
-        <a href={demoLink} target="_blank" rel="noopener noreferrer" className="hover:bg-yellow-400 border-2 border-black bg-yellow-300 p-3 text-center no-underline text-black font-Poppins font-semibold text-lg rounded-full">
-          View Project Demo
-        </a>
 
-        <div className="float-right">
+        <Grid container>
+          <Grid item xs={12}>
+            <div className=''>
+            <a href={demoLink} target="_blank" rel="noopener noreferrer" className="hover:bg-yellow-400 border-2  flex border-black bg-yellow-300 p-3 text-center no-underline text-black font-Poppins font-semibold text-lg rounded-full items-center">
+            View Project Demo
+              </a>
+            </div>
+          
+          </Grid>
+
+          <Grid item >
+          
             {Object.keys(resumeData.social).map(key=>(
-              <a href={resumeData.social[key].link} target="_blank" className=" p-1 mr-2 hover:text-black">{resumeData.social[key].icon}</a>
+              
+                <a href={resumeData.social[key].link} target="_blank" className=" p-3 text-xl hover:text-black">{resumeData.social[key].icon}</a>
+              
             ))}
-        </div>
+          
+          </Grid>
+        </Grid>
+       
+
+        
       </Modal>
     </div>
   );

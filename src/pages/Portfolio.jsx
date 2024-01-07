@@ -1,19 +1,19 @@
 import React from "react";
-import Header from "../components/Header";
-import { Tabs, Tab, Card, CardActionArea, CardMedia, CardContent, Typography, Grow } from "@mui/material";
-import { Container, Grid } from "@material-ui/core";
-import { useState } from "react";
-import CustomTabs from "../components/CustomTabs";
-import resumeData from "../utils/resumeData";
-import { useLocation } from "react-router";
-import CustomCards from "../components/CustomCards";
+// import Header from "../components/Header";
+// import { Tabs, Tab, Card, CardActionArea, CardMedia, CardContent, Typography, Grow } from "@mui/material";
+import {  Grid } from "@material-ui/core";
+// import { useState } from "react";
+// import CustomTabs from "../components/CustomTabs";
+// import resumeData from "../utils/resumeData";
+// import { useLocation } from "react-router";
+// import CustomCards from "../components/CustomCards";
 import portfolioData from "../data/portfolioData";
 import GalleryModal from "../components/ImgGallery";
 
 const Portfolio = () => {
   // const { tabValue, setTabValue } = useState("All");
 
-  const pathName = useLocation().pathname;
+  // const pathName = useLocation().pathname;
   return (
     // <Grid container>
     // <Grid
@@ -95,6 +95,11 @@ const Portfolio = () => {
           {/* <CustomCards tag={portfolioData.project4.tag} title= caption={portfolioData.project2.caption} {portfolioData.project4.title} description={portfolioData.project4.description} images={portfolioData.project4.images}/> */}
           <GalleryModal projectTitle={portfolioData.project4.title} caption={portfolioData.project4.caption} projectVideos={portfolioData.project4.videos} projectImages={portfolioData.project4.images} projectDescription={portfolioData.project4.description} demoLink={portfolioData.project4.links[0]} />
 
+        </Grid>
+
+        <Grid item >
+        {/* <CustomCards tag={portfolioData.project3.tag} title={p caption={portfolioData.project2.caption} ortfolioData.project3.title} description={portfolioData.project3.description} images={portfolioData.project3.images}/> */}
+          <GalleryModal projectTitle={portfolioData.project5.title}  caption={portfolioData.project5.caption} projectVideos={portfolioData.project5.videos} projectImages={portfolioData.project5.images} projectDescription={portfolioData.project5.description} demoLink={portfolioData.project5.links[0]} />
         </Grid>
       </Grid>
     </Grid>
