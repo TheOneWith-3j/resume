@@ -25,7 +25,7 @@ const Footer = () => {
 
   useEffect(() => {
     // Make a POST request when the component mounts (user arrives on the website)
-    fetch('/visit', {
+    fetch('https://resume-backend-kpj86ws13-jash-joshis-projects.vercel.app/visit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ const Footer = () => {
     });
 
     // Fetch visit count when the component mounts
-    fetch('/visit-count')
+    fetch('https://resume-backend-kpj86ws13-jash-joshis-projects.vercel.app/visit-count')
       .then((response) => response.json())
       .then((data) => setVisitCount(data.visitCount))
       .catch((error) => console.error('Error fetching visit count:', error));
@@ -43,7 +43,7 @@ const Footer = () => {
 
   // Periodically poll the server to keep the session active
 setInterval(() => {
-  fetch('/poll', {
+  fetch('https://resume-backend-kpj86ws13-jash-joshis-projects.vercel.app/poll', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ setInterval(() => {
 
 
   window.addEventListener('beforeunload', () => {
-    fetch('/leave', {
+    fetch('https://resume-backend-kpj86ws13-jash-joshis-projects.vercel.app/leave', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
