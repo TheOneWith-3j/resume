@@ -25,7 +25,7 @@ const Footer = () => {
 
   useEffect(() => {
     // Make a POST request when the component mounts (user arrives on the website)
-    fetch('http://localhost:8081/visit', {
+    fetch('/visit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ const Footer = () => {
     });
 
     // Fetch visit count when the component mounts
-    fetch('http://localhost:8081/visit-count')
+    fetch('/visit-count')
       .then((response) => response.json())
       .then((data) => setVisitCount(data.visitCount))
       .catch((error) => console.error('Error fetching visit count:', error));
@@ -43,7 +43,7 @@ const Footer = () => {
 
   // Periodically poll the server to keep the session active
 setInterval(() => {
-  fetch('http://localhost:8081/poll', {
+  fetch('/poll', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ setInterval(() => {
 
 
   window.addEventListener('beforeunload', () => {
-    fetch('http://localhost:8081/leave', {
+    fetch('/leave', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -88,7 +88,7 @@ setInterval(() => {
   
   // function updateCounter(type) {
   
-  //   fetch('http://localhost:8081/api?'+type) // Dynamic request with URL parameter
+  //   fetch('/api?'+type) // Dynamic request with URL parameter
   //     .then(res => res.json())
   //     .then(data => {
   //       pageviewsCount.textContent = data.pageviews; // Display pageviews to user
